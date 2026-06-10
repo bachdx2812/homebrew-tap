@@ -4,8 +4,8 @@
 # `sha256` is filled from the released universal .dmg.
 # For a purely local install (no release), run packaging/install-local.sh.
 cask "quickmemo" do
-  version "1.0.0"
-  sha256 "af0f492b977e9deb61d018b46d4434abb5ccb0b8a67d04cc8bd5106e62942d3e"
+  version "1.1.0"
+  sha256 "9391e5e73d4f48d0d118522db35666db589be019612da917073c7779ef1b3a33"
 
   url "https://github.com/bachdx2812/quick-note/releases/download/v#{version}/QuickMemo_#{version}_universal.dmg"
   name "QuickMemo"
