@@ -1,6 +1,6 @@
 cask "translation-on-air" do
-  version "0.1.0"
-  sha256 "dd407cbbbe5aa07edfe4207db2a0f555b97851c347f00eb0334464c8b6ac1830"
+  version "0.1.1"
+  sha256 "29c4cf8483427c6ca9bd5c7fe858ab9628d0ef25f9a5cd8fad42a7786c075d3d"
 
   # Tauri replaces spaces in the productName with dots for the bundle filename.
   url "https://github.com/bachdx2812/translation-on-air/releases/download/v#{version}/Translate.On.Air_#{version}_universal.dmg"
