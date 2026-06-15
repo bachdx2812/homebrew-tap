@@ -17,7 +17,7 @@ cask "speakmate" do
   desc "English/Japanese speaking practice — Azure pronunciation + Claude grammar scoring"
   homepage "https://github.com/bachdx2812/speakmate"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "SpeakMate.app"
 

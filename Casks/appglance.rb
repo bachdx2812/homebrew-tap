@@ -13,7 +13,7 @@ cask "appglance" do
   desc "App-centric macOS activity monitor"
   homepage "https://github.com/bachdx2812/app-consuming-monitor"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "AppGlance.app"
 
