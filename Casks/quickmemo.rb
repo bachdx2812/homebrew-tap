@@ -12,7 +12,7 @@ cask "quickmemo" do
   desc "Fast menu-bar note capture for macOS"
   homepage "https://github.com/bachdx2812/quick-note"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "QuickMemo.app"
 
