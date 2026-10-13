@@ -12,12 +12,22 @@ cask "translation-on-air" do
 
   app "Translate On Air.app"
 
+  # Builds are ad-hoc signed, not notarized. On macOS 15+ Gatekeeper then refuses
+  # to open the app ("Apple could not verify…") and right-click → Open no longer
+  # bypasses it, so drop the quarantine flag the download added.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Translate On Air.app"]
+  end
+
   caveats <<~EOS
     Translate On Air needs Accessibility permission to read the selected text:
       System Settings → Privacy & Security → Accessibility → enable "Translate On Air".
+    After an upgrade, macOS may keep showing it as enabled while denying access:
+    remove it from that list with "−", then enable it again.
 
-    Builds are not notarized yet. If macOS blocks the app on first launch:
-      right-click the app → Open, or run
+    Builds are not notarized yet. If macOS still blocks the app on first launch,
+    run the command below, or use System Settings → Privacy & Security → Open Anyway:
       xattr -dr com.apple.quarantine "/Applications/Translate On Air.app"
   EOS
 end
