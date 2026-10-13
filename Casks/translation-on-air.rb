@@ -8,7 +8,7 @@ cask "translation-on-air" do
   desc "Menubar translation app with a global hotkey and Japanese furigana"
   homepage "https://github.com/bachdx2812/translation-on-air"
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Translate On Air.app"
 
